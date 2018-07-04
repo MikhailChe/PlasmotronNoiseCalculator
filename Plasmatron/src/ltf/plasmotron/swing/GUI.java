@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-import ltf.plasmotron.PlasmatronFiller;
+import ltf.plasmotron.PlasmotronFiller;
 import params.Parameter;
 import params.ParameterPool;
 
@@ -21,7 +21,7 @@ public class GUI extends JFrame {
 		content.setLayout(new BorderLayout(8, 8));
 
 		ParameterPool pool = ParameterPool.getCommonPool();
-		PlasmatronFiller.fillPool(pool);
+		PlasmotronFiller.fillPool(pool);
 		final Painter painter = new Painter(pool, Parameter.of("L").sub("p"), Parameter.GREEK_SMALL_OMEGA,
 				100.0 * 2.0 * PI, 16_000.0 * 2.0 * PI);
 
